@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #fbfbf9;
+    color: #434338;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
+
+/* Custom Natural Tones design theme colors & utility classes */
+:root {
+  --natural-bg: #fbfbf9;
+  --natural-surface: #ffffff;
+  --natural-subtle: #f5f5f0;
+  --natural-border: #e6e6df;
+  --natural-border-light: #f0f0eb;
+  --natural-text: #2a2a22;
+  --natural-body: #434338;
+  --natural-muted: #707060;
+  --natural-light: #a1a194;
+  --natural-olive: #5a5a40;
+  --natural-olive-dark: #3a3a2a;
+  --natural-olive-hover: #484833;
+}
+
+/* Scrollbar customization matching Natural Tones */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f5f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #d8d8ce;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a194;
+}

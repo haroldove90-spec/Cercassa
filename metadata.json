@@ -1,0 +1,6 @@
+{
+  "name": "Cercassa",
+  "description": "Sistema ERP y CRM minimalista para gestión de negocios de mallas, alambrados y cercas electrificadas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
