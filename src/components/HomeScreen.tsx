@@ -50,19 +50,19 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ onSelectRole }) => {
         </div>
 
         {/* Separated Role Buttons */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full max-w-3xl">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 w-full max-w-3xl">
           {roles.map((role) => {
             const IconComponent = role.icon;
             return (
               <button
                 key={role.id}
                 onClick={() => handleRoleSelect(role.id)}
-                className="bg-white border-2 border-[#e6e6df] hover:border-[#5a5a40] hover:bg-[#f5f5f0] p-8 rounded-2xl flex flex-col items-center justify-center space-y-4 shadow-sm hover:shadow-md transition-all group cursor-pointer active:scale-95"
+                className="bg-white border-2 border-[#e6e6df] hover:border-[#5a5a40] hover:bg-[#f5f5f0] p-4 sm:p-8 rounded-2xl flex flex-col items-center justify-center space-y-3 sm:space-y-4 shadow-sm hover:shadow-md transition-all group cursor-pointer active:scale-95"
               >
-                <div className="w-16 h-16 rounded-2xl bg-[#f5f5f0] group-hover:bg-[#5a5a40] text-[#5a5a40] group-hover:text-white flex items-center justify-center transition-colors shadow-inner">
-                  <IconComponent className="w-8 h-8 stroke-[2]" />
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-[#f5f5f0] group-hover:bg-[#5a5a40] text-[#5a5a40] group-hover:text-white flex items-center justify-center transition-colors shadow-inner">
+                  <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 stroke-[2]" />
                 </div>
-                <span className="font-bold text-[#2a2a22] text-base group-hover:text-[#5a5a40]">
+                <span className="font-bold text-[#2a2a22] text-xs sm:text-base group-hover:text-[#5a5a40] leading-tight">
                   {role.name}
                 </span>
               </button>
