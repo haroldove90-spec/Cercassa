@@ -49,11 +49,16 @@ function notify() {
 // Current Active Role
 export function getCurrentRole(): UserRole {
   const saved = localStorage.getItem(KEYS.CURRENT_ROLE);
-  return (saved as UserRole) || 'admin';
+  if (!saved || saved === 'null') return null;
+  return saved as UserRole;
 }
 
 export function setCurrentRole(role: UserRole): void {
-  localStorage.setItem(KEYS.CURRENT_ROLE, role);
+  if (role === null) {
+    localStorage.removeItem(KEYS.CURRENT_ROLE);
+  } else {
+    localStorage.setItem(KEYS.CURRENT_ROLE, role);
+  }
   notify();
 }
 
@@ -430,6 +435,7 @@ export function getCurrentRoleLabel(): string {
     case 'sales': return 'Lic. Sofía Ramírez (Ventas)';
     case 'warehouse': return 'Don Roberto Hernández (Almacén)';
     case 'field': return 'Ing. Fernando Torres (Cuadrilla)';
+    default: return 'Seleccionar Rol';
   }
 }
 

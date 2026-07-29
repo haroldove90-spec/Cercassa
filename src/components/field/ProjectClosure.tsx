@@ -94,12 +94,12 @@ export const ProjectClosure: React.FC<ProjectClosureProps> = ({ project, onUpdat
       signatureData = canvasRef.current.toDataURL();
     }
 
-    completeProject(project.id, {
-      collectedAmount,
+    completeProject(
+      project.id,
+      signatureData || '',
       customerSignedName,
-      paymentMethod,
-      signatureDataUrl: signatureData,
-    });
+      paymentMethod
+    );
 
     const all = getWorkProjects();
     const curr = all.find((p) => p.id === project.id);

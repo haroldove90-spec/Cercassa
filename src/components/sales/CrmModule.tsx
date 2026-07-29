@@ -98,12 +98,14 @@ export const CrmModule: React.FC = () => {
         return <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#f0f0eb] text-[#707060] border border-[#e6e6df]">Prospecto</span>;
       case 'cotizado':
         return <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#e5ebf2] text-[#2b4c6f] border border-[#c3d1e0]">Cotizado</span>;
-      case 'anticipo_pagado':
-        return <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#f5ebd7] text-[#704d19] border border-[#e6d3b3]">Anticipo Registrado</span>;
-      case 'obra_en_proceso':
-        return <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#e2ebe0] text-[#2d4d31] border border-[#c3d4c0]">Obra en Proceso</span>;
-      case 'completado':
-        return <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#3d6e43] text-white">Completado</span>;
+      case 'en_negociacion':
+        return <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#f5ebd7] text-[#704d19] border border-[#e6d3b3]">En Negociación</span>;
+      case 'cerrado':
+        return <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#e2ebe0] text-[#2d4d31] border border-[#c3d4c0]">Cerrado / Ganado</span>;
+      case 'perdido':
+        return <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#fbeae8] text-[#8c2d2d] border border-[#f5c6c6]">Perdido</span>;
+      default:
+        return <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#f0f0eb] text-[#707060]">{status}</span>;
     }
   };
 
